@@ -1,6 +1,8 @@
 ## Bubble Sort
 ![Bubble sort](https://upload.wikimedia.org/wikipedia/commons/0/06/Bubble-sort.gif)
 
+### Core: bubbling , continuously comparing adjacent elements, the larger ones move to the back, so the larger ones will gradually move back, so it is called bubbling. 
+
 #### when n=6 
 #### j loop is n-i which is 6-1=5
 #### since we are starting from 0 therefore n-i-1
@@ -43,9 +45,14 @@ int main() {
 
 ```
 
-## Selectio sort
-
+## Selection sort
 ![Selection sort](https://algorithm.yuanbin.me/shared-files/images/selection_sort.gif)
+
+### Core: Constantly choose the smallest of the remaining elements.
+
+    Find the smallest element in the array and swap it with the first element of the array.
+    Find the smallest element among the remaining elements and exchange it with the second element of the array until the entire array is sorted.
+
 
 ```c++
 #include <iostream>
