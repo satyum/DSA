@@ -88,3 +88,51 @@ int main() {
 }
 
 ```
+### Insertion sort
+![insertion sort](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
+
+
+    Starting from the first element, the element can be considered sorted
+    Take the next element and scan the sorted array from back to front
+    If the element removed from the sorted array is greater than the new element, move to the next position
+    Repeat step 3 until you find the position where the sorted element is less than or equal to the new element
+    Insert a new element to this position
+    Repeat 2~5
+
+
+```c++
+#include <iostream>
+using namespace std;
+
+
+void insertSort(int array[], int n)
+ {
+	 int i ,j;
+	for( i=1;i<n;i++){
+		int temp=array[i];
+		for( j=i-1;j>=0 && array[j]>temp;j--)
+		{
+			array[j+1]=array[j];
+		}
+		array[j+1]=temp;
+	}
+	
+		
+}
+
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; ++i) {
+    cout << "  " << array[i];
+  }
+  cout << "\n";
+}
+
+int main() {
+  int array[] = {-2, 45, 0, 11, -9};
+  int n = sizeof(array) / sizeof(array[0]);
+  insertSort(array, n);
+  cout << "Sorted Array in Ascending Order:\n";  
+  printArray(array, n);
+}
+
+```
